@@ -87,7 +87,9 @@ define([], function () {
     };
     // 进入视图
     $ctrl.$onEnter = function (param, rs, rj) {
-
+      console.log(this.$http.get('add/ddd', {a:"qq"}).then(data => {
+        
+      }))
     };
     // 对应的视图销毁前
     $ctrl.$onBeforeUnload = function () {

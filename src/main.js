@@ -15,14 +15,14 @@ require("./assets/vendor/oniui/datepicker/avalon.coupledatepicker");
 require("./assets/vendor/oniui/pager/avalon.pager");
 require("./assets/vendor/oniui/dialog/avalon.dialog");
 require("./assets/vendor/oniui/validation/avalon.validation");
-import http from './utils/http'
+var http = require("./utils/http")
 
 
 // 定义一个顶层的vmodel，用来放置全局共享数据
 var root = avalon.define({
   $id: "app"
 });
-avalon.prototype.$http = http
+window.$http = http
 
 const router = require("./router")
 // 判断手机设备
