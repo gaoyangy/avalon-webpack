@@ -1,5 +1,9 @@
-define([], function () {
-  var baseUrl = '', upHeaders = {}, transmitHeaders = []
+define([
+  '../../config/index.js'
+], function (config) {
+  var baseUrl = config.baseUrl,
+  upHeaders = config.upHeaders,
+  transmitHeaders = config.transmitHeaders;
   return {
     get (url) {
       return this.do('GET', url)
